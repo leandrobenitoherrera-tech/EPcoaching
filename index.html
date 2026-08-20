@@ -24,6 +24,32 @@
 <meta property="og:image" content="https://e-pcoaching.vercel.app/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Christian Benito, Coach en Comunicación Efectiv<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Christian Benito · Coach en Comunicación Efectiva</title>
+
+<!-- SEO -->
+<meta name="description" content="Coaching individual y personalizado para hablar en público con seguridad, proyectar autoridad y conectar con audiencias exigentes. Método V.I.P. — Voz, Impacto, PNL. Sesión exploratoria gratuita de 20 minutos.">
+<meta name="keywords" content="coaching de comunicación, coach de comunicación efectiva, hablar en público, oratoria, miedo escénico, coaching ejecutivo, comunicación asertiva, PNL, vocería, media training, Bogotá, Colombia">
+<meta name="author" content="Christian Benito">
+<meta name="robots" content="index, follow">
+<meta name="language" content="es">
+<meta name="geo.region" content="CO-DC">
+<meta name="geo.placename" content="Bogotá, Colombia">
+<link rel="canonical" href="https://e-pcoaching.vercel.app/">
+
+<!-- Open Graph / Facebook, WhatsApp, LinkedIn -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://e-pcoaching.vercel.app/">
+<meta property="og:site_name" content="Christian Benito · Coach en Comunicación Efectiva">
+<meta property="og:title" content="Christian Benito · Coach en Comunicación Efectiva">
+<meta property="og:description" content="Gestiona audiencias exigentes con seguridad y efectividad. Coaching individual con el método V.I.P. — Voz, Impacto, PNL. Sesión exploratoria gratis de 20 minutos.">
+<meta property="og:image" content="https://e-pcoaching.vercel.app/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Christian Benito, Coach en Comunicación Efectiva">
 <meta property="og:locale" content="es_CO">
 
@@ -35,7 +61,7 @@
 <meta name="twitter:image:alt" content="Christian Benito, Coach en Comunicación Efectiva">
 
 <!-- Favicon -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23181114'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-style='italic' font-size='58' fill='%23E0DAD3' text-anchor='middle'%3ECB%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231B2430'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-style='italic' font-size='58' fill='%23F7F5F0' text-anchor='middle'%3ECB%3C/text%3E%3C/svg%3E">
 
 <!-- Structured data for search engines -->
 <script type="application/ld+json">
@@ -65,14 +91,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --cream:#E0DAD3;
-    --cream-soft:#EAE5DF;
-    --taupe:#C3B9AA;
-    --mocha:#8B7C6D;
-    --umber:#4B443D;
-    --ink:#181114;
-    --cream-rgb: 224,218,211;
-    --ink-rgb: 24,17,20;
+    --cream:#F7F5F0;
+    --cream-soft:#EFECE5;
+    --taupe:#3D93A0;
+    --mocha:#E4368E;
+    --umber:#47535C;
+    --ink:#1B2430;
+    --cream-rgb: 247,245,240;
+    --ink-rgb: 27,36,48;
 
     --font-display:'Fraunces', serif;
     --font-body:'Inter', sans-serif;
@@ -176,7 +202,7 @@
     border-radius: 999px;
     cursor:pointer;
     border:1px solid transparent;
-    transition: transform .35s cubic-bezier(.16,1,.3,1), background .25s ease, color .25s ease, border-color .25s ease;
+    transition: transform .35s cubic-bezier(.16,1,.3,1), background .25s ease, color .25s ease, border-color .25s ease, box-shadow .35s ease;
     white-space:nowrap;
   }
   .btn:hover{transform: translateY(-2px);}
@@ -185,21 +211,39 @@
   .btn-primary{
     background:var(--ink);
     color:var(--cream);
+    animation: glowInk 3.6s ease-in-out infinite;
   }
   .btn-primary:hover{background:var(--umber);}
 
   .btn-outline{
-    background:transparent;
-    border-color: currentColor;
-    color:var(--ink);
+    background:var(--ink);
+    border-color: var(--ink);
+    color:var(--cream);
+    animation: glowInk 3.6s ease-in-out infinite;
   }
-  .btn-outline:hover{background:var(--ink); color:var(--cream);}
+  .btn-outline:hover{background:transparent; color:var(--ink);}
 
   .btn-on-dark{
     background:var(--cream);
     color:var(--ink);
+    animation: glowOnDark 3.6s ease-in-out infinite;
   }
   .btn-on-dark:hover{background:var(--taupe);}
+
+  /* Glow tuned per background: soft teal halo on navy/dark sections,
+     soft ink halo on light cream sections — kept low-opacity to avoid looking loud. */
+  @keyframes glowOnDark{
+    0%, 100%{ box-shadow: 0 0 0 0 rgba(61,147,160,0); }
+    50%{ box-shadow: 0 0 22px 4px rgba(61,147,160,0.35); }
+  }
+  @keyframes glowInk{
+    0%, 100%{ box-shadow: 0 0 0 0 rgba(61,147,160,0); }
+    50%{ box-shadow: 0 0 20px 3px rgba(61,147,160,0.3); }
+  }
+  @keyframes glowOutline{
+    0%, 100%{ box-shadow: 0 0 0 0 rgba(27,36,48,0); }
+    50%{ box-shadow: 0 0 16px 2px rgba(27,36,48,0.18); }
+  }
 
   .micro{
     font-family:var(--font-mono);
@@ -207,6 +251,12 @@
     letter-spacing:0.04em;
     color:var(--mocha);
     margin-top:12px;
+    animation: microFlicker 2.8s ease-in-out infinite;
+  }
+
+  @keyframes microFlicker{
+    0%, 100%{ opacity:1; }
+    50%{ opacity:0.6; }
   }
 
   /* ---------- Waveform signature motif ---------- */
@@ -343,10 +393,8 @@
   .hero::before{
     content:"";
     position:absolute;
-    top:-30%; right:-10%;
-    width:60%;
-    height:160%;
-    background: radial-gradient(circle at center, rgba(139,124,109,0.35) 0%, rgba(139,124,109,0) 65%);
+    top:0; left:0; right:0; bottom:0;
+    background: radial-gradient(circle at center, rgba(71,83,92,0.45) 0%, rgba(71,83,92,0) 60%);
     pointer-events:none;
   }
   .hero-inner{
@@ -371,7 +419,7 @@
     margin-top:28px;
     max-width:56ch;
     font-size:18px;
-    color:rgba(224,218,211,0.78);
+    color:rgba(247,245,240,0.78);
   }
   .hero .subtitle strong{color:var(--cream); font-weight:600;}
 
@@ -392,7 +440,7 @@
   .trust-strip{
     margin-top:70px;
     padding-top:34px;
-    border-top:1px solid rgba(224,218,211,0.18);
+    border-top:1px solid rgba(247,245,240,0.18);
     display:flex;
     align-items:baseline;
     gap:18px;
@@ -510,7 +558,7 @@
   }
   .method .eyebrow{color:var(--taupe); margin-bottom:20px;}
   .method .section-title{color:var(--cream); max-width:20ch;}
-  .method .lede{color:rgba(224,218,211,0.75);}
+  .method .lede{color:rgba(247,245,240,0.75);}
 
   .method-letters{
     font-family:var(--font-mono);
@@ -525,7 +573,7 @@
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     gap:1px;
-    background:rgba(224,218,211,0.15);
+    background:rgba(247,245,240,0.15);
   }
   @media(max-width:900px){
     .method-grid{grid-template-columns:1fr;}
@@ -566,7 +614,7 @@
   }
   .method-card li{
     font-size:14.5px;
-    color:rgba(224,218,211,0.82);
+    color:rgba(247,245,240,0.82);
     padding-left:18px;
     position:relative;
     line-height:1.5;
@@ -605,7 +653,7 @@
     padding:48px;
     position:relative;
     overflow:hidden;
-    box-shadow: 0 40px 80px -30px rgba(24,17,20,0.4);
+    box-shadow: 0 40px 80px -30px rgba(27,36,48,0.4);
   }
   @media(max-width:600px){
     .diag-card{padding:30px 24px;}
@@ -624,7 +672,7 @@
   .diag-progress-track{
     flex:1;
     height:2px;
-    background:rgba(224,218,211,0.2);
+    background:rgba(247,245,240,0.2);
     margin:0 18px;
     position:relative;
   }
@@ -640,7 +688,7 @@
     letter-spacing:0.1em;
     text-transform:uppercase;
     color:var(--mocha);
-    background:rgba(195,185,170,0.12);
+    background:rgba(61,147,160,0.12);
     display:inline-block;
     padding:5px 12px;
     border-radius:999px;
@@ -664,7 +712,7 @@
   .diag-option{
     text-align:left;
     background:transparent;
-    border:1px solid rgba(224,218,211,0.25);
+    border:1px solid rgba(247,245,240,0.25);
     color:var(--cream);
     padding:16px 20px;
     border-radius:4px;
@@ -678,7 +726,7 @@
   }
   .diag-option:hover{
     border-color:var(--taupe);
-    background:rgba(195,185,170,0.08);
+    background:rgba(61,147,160,0.08);
     transform:translateX(4px);
   }
   .diag-option .opt-arrow{opacity:0; transition:opacity .2s ease; font-family:var(--font-mono);}
@@ -720,7 +768,7 @@
   }
   .diag-results .result-desc{
     font-size:15px;
-    color:rgba(224,218,211,0.75);
+    color:rgba(247,245,240,0.75);
     margin-bottom:34px;
     line-height:1.6;
   }
@@ -738,7 +786,7 @@
   }
   .bar-track{
     height:8px;
-    background:rgba(224,218,211,0.15);
+    background:rgba(247,245,240,0.15);
     border-radius:99px;
     overflow:hidden;
   }
@@ -775,6 +823,14 @@
     max-width:480px;
     margin:26px auto 0;
     line-height:1.6;
+  }
+
+  .diag-cta{
+    margin-top:40px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
   }
 
   /* ============ TRANSFORMATION ============ */
@@ -815,7 +871,7 @@
   }
   .transform-list li{
     padding:26px 0;
-    border-bottom:1px solid rgba(75,68,61,0.18);
+    border-bottom:1px solid rgba(71,83,92,0.18);
     display:grid;
     grid-template-columns:32px 1fr;
     gap:18px;
@@ -850,7 +906,7 @@
   .about-photo{
     aspect-ratio: 4/5;
     background: linear-gradient(160deg, var(--umber), var(--ink));
-    border:1px solid rgba(224,218,211,0.15);
+    border:1px solid rgba(247,245,240,0.15);
     display:flex;
     align-items:center;
     justify-content:center;
@@ -877,7 +933,7 @@
     content:"";
     position:absolute;
     inset:0;
-    background: radial-gradient(circle at 30% 20%, rgba(195,185,170,0.25), transparent 60%);
+    background: radial-gradient(circle at 30% 20%, rgba(61,147,160,0.25), transparent 60%);
   }
   .about-photo-caption{
     margin-top:18px;
@@ -890,7 +946,7 @@
   .about-copy .eyebrow{color:var(--taupe); margin-bottom:20px;}
   .about-copy p{
     font-size:16px;
-    color:rgba(224,218,211,0.8);
+    color:rgba(247,245,240,0.8);
     margin-bottom:20px;
     line-height:1.7;
   }
@@ -907,7 +963,7 @@
     font-size:11.5px;
     letter-spacing:0.03em;
     color:var(--taupe);
-    border:1px solid rgba(195,185,170,0.35);
+    border:1px solid rgba(61,147,160,0.35);
     padding:8px 14px;
     border-radius:999px;
   }
@@ -917,7 +973,7 @@
   /* ============ SOCIAL PROOF STAT ============ */
   .proof{
     background:var(--mocha);
-    color:var(--ink);
+    color:var(--cream);
     text-align:center;
   }
   .proof-inner{
@@ -931,12 +987,12 @@
     font-size:clamp(64px, 10vw, 130px);
     font-style:italic;
     line-height:1;
-    color:var(--ink);
+    color:var(--cream);
   }
   .proof .proof-text{
     font-size:17px;
     max-width:44ch;
-    color:rgba(24,17,20,0.78);
+    color:rgba(247,245,240,0.88);
     margin-top:14px;
   }
 
@@ -951,9 +1007,9 @@
     max-width:800px;
   }
   .faq-item{
-    border-bottom:1px solid rgba(75,68,61,0.25);
+    border-bottom:1px solid rgba(71,83,92,0.25);
   }
-  .faq-item:first-child{border-top:1px solid rgba(75,68,61,0.25);}
+  .faq-item:first-child{border-top:1px solid rgba(71,83,92,0.25);}
   .faq-q{
     width:100%;
     background:none;
@@ -1004,11 +1060,8 @@
   .final-cta::before{
     content:"";
     position:absolute;
-    top:-40%; left:50%;
-    transform:translateX(-50%);
-    width:80%;
-    height:140%;
-    background: radial-gradient(circle, rgba(139,124,109,0.3), transparent 65%);
+    top:0; left:0; right:0; bottom:0;
+    background: radial-gradient(circle at center, rgba(71,83,92,0.45) 0%, rgba(71,83,92,0) 60%);
     pointer-events:none;
   }
   .final-cta-inner{
@@ -1028,7 +1081,7 @@
   .final-cta p.lede{
     margin:0 auto 40px;
     text-align:center;
-    color:rgba(224,218,211,0.75);
+    color:rgba(247,245,240,0.75);
   }
   .final-wave{margin:44px auto 0; color:var(--taupe); justify-content:center; display:flex;}
 
@@ -1037,7 +1090,7 @@
     background:var(--ink);
     color:var(--taupe);
     padding:50px 0 34px;
-    border-top:1px solid rgba(224,218,211,0.12);
+    border-top:1px solid rgba(247,245,240,0.12);
   }
   .footer-top{
     display:flex;
@@ -1046,7 +1099,7 @@
     flex-wrap:wrap;
     gap:20px;
     padding-bottom:34px;
-    border-bottom:1px solid rgba(224,218,211,0.1);
+    border-bottom:1px solid rgba(247,245,240,0.1);
   }
   .footer-top .logo{font-size:18px;}
   .footer-links{
@@ -1060,7 +1113,7 @@
     margin-top:30px;
     font-size:12px;
     line-height:1.8;
-    color:rgba(195,185,170,0.65);
+    color:rgba(61,147,160,0.65);
   }
   .legal p{margin-bottom:12px;}
   .legal strong{color:var(--taupe);}
@@ -1085,7 +1138,7 @@
     padding:14px 18px;
     display:flex;
     justify-content:center;
-    border-top:1px solid rgba(224,218,211,0.15);
+    border-top:1px solid rgba(247,245,240,0.15);
     transform:translateY(100%);
     transition:transform .4s cubic-bezier(.16,1,.3,1);
   }
@@ -1143,9 +1196,9 @@
         <h1 class="reveal">Gestiona audiencias exigentes con <em>seguridad y efectividad</em>.</h1>
         <p class="subtitle reveal">Te acompaño en un proceso de coaching en comunicación efectiva personalizado, privado y diseñado a tu medida para que proyectes presencia ejecutiva frente a un equipo, una audiencia remota o un gran auditorio.</p>
         <div class="hero-cta-row reveal">
-          <a href="#" class="btn btn-primary whatsapp-link" style="background:var(--cream); color:var(--ink);">💬 Quiero llevar mi comunicación al siguiente nivel</a>
+          <a href="#" class="btn btn-on-dark whatsapp-link">💬 Quiero llevar mi comunicación al siguiente nivel</a>
         </div>
-        <p class="micro reveal">Sesión exploratoria inicial gratuita · 15 minutos</p>
+        <p class="micro reveal">Sesión exploratoria inicial gratuita · 20 minutos</p>
 
         <div class="hero-wave reveal" aria-hidden="true">
           <div class="waveform">
@@ -1198,12 +1251,12 @@
 
       <div class="vision-callout reveal">
         <span class="label">Mi visión</span>
-        <p>No nacemos sabiendo comunicar; es una habilidad que se entrena. No se trata de fingir ser otra persona ni cambiar tu esencia — se trata de <em>potenciar tu autenticidad</em> para que hables con naturalidad, seguridad y absoluta convicción, siempre con una base técnica que te ayude a entender qué herramientas te dan confianza.</p>
+        <p>Nadie nace siendo un experto en comunicar. Expresarnos de forma efectiva frente a los demás es una habilidad que se entrena. No se trata de fingir ser otra persona ni cambiar tu esencia — se trata de <em>potenciar tu autenticidad</em> para que hables con naturalidad, seguridad y absoluta convicción, siempre con una base técnica que te ayude a entender qué herramientas te dan confianza.</p>
       </div>
 
       <div class="empathy-cta reveal">
         <a href="#" class="btn btn-outline whatsapp-link">Hablemos de tus retos de comunicación</a>
-        <span class="micro" style="margin-top:0;">Sesión exploratoria de 15 minutos, completamente gratis</span>
+        <span class="micro" style="margin-top:0;">Sesión exploratoria de 20 minutos, completamente gratis</span>
       </div>
     </div>
   </section>
@@ -1211,8 +1264,8 @@
   <!-- ============ METHOD V.I.P. ============ -->
   <section class="method" id="metodo">
     <div class="wrap">
-      <p class="eyebrow reveal">Metodología integral</p>
-      <h2 class="section-title reveal">Un entrenamiento 100% práctico, adaptado a tus necesidades reales.</h2>
+      <p class="eyebrow reveal">Método V.I.P</p>
+      <h2 class="section-title reveal">Un coaching 100% práctico y customizado para trabajar en tus retos y oportunidades de mejora.</h2>
       <p class="lede reveal" style="margin-top:20px;">Entiendo la comunicación como un conjunto de hábitos que se pueden moldear. Trabajamos tres dimensiones hasta que alcances un dominio total.</p>
       <p class="method-letters reveal">V · O · Z &nbsp;&nbsp;—&nbsp;&nbsp; I · M · P · A · C · T · O &nbsp;&nbsp;—&nbsp;&nbsp; P · N · L</p>
 
@@ -1224,7 +1277,7 @@
           <ul>
             <li>Descubrimiento del tono, volumen y modulación óptimos de tu voz.</li>
             <li>Técnicas de respiración para evitar la aceleración y la fatiga vocal.</li>
-            <li>Calentamiento y herramientas para proyectar autoridad sin gritar.</li>
+            <li>Consistencia e intención: herramientas para proyectar autoridad sin gritar.</li>
             <li>Control de muletillas y sonidos distractores.</li>
           </ul>
         </div>
@@ -1235,9 +1288,9 @@
           <ul>
             <li>Dominio de la postura corporal, la gestualidad y la expresión facial.</li>
             <li>Uso estratégico del espacio, virtual o presencial.</li>
-            <li>Control del miedo escénico y transformación de la ansiedad en energía.</li>
+            <li>Control del miedo escénico y transformación de la ansiedad en calma.</li>
             <li>Simulación de entrevistas para TV, radio, podcasts o transmisiones en vivo.</li>
-            <li>Técnicas de mirada a cámara y lectura de teleprompter con naturalidad.</li>
+            <li>Técnicas de contacto visual, manejo de cámara y lectura de teleprompter con naturalidad.</li>
           </ul>
         </div>
         <div class="method-card">
@@ -1261,7 +1314,7 @@
     <div class="wrap">
       <div class="diag-head reveal">
         <p class="eyebrow">Diagnóstico V · I · P</p>
-        <h2 class="section-title">¿Qué tan lista está tu comunicación para tu próxima gran audiencia?</h2>
+        <h2 class="section-title">¿Te sientes preparado para comunicar de forma efectiva frente a tu próxima gran audiencia?</h2>
         <p class="lede">6 preguntas, menos de 2 minutos. Descubre en cuál de las tres dimensiones — Voz, Impacto o PNL — se está fugando tu seguridad al hablar.</p>
       </div>
 
@@ -1297,6 +1350,11 @@
       </div>
 
       <p class="diag-disclaimer reveal">Estimación orientativa a partir de tus respuestas. No sustituye la sesión exploratoria gratuita, en la que revisamos tu caso real con más detalle.</p>
+
+      <div class="diag-cta reveal">
+        <a href="#" class="btn btn-primary whatsapp-link">💬 Prefiero hablarlo directamente con Christian</a>
+        <span class="micro" style="margin-top:0;">Sesión exploratoria de 20 minutos, completamente gratis</span>
+      </div>
     </div>
   </section>
 
@@ -1310,6 +1368,7 @@
           <div class="big">6 sesiones</div>
           <div class="small">1 hora y 20 minutos cada una · resultados medibles desde las primeras semanas</div>
         </div>
+        <p class="lede" style="margin-top:28px; font-weight:600; color:var(--ink);">En 6 sesiones de coaching podrás experimentar:</p>
       </div>
 
       <ul class="transform-list reveal">
@@ -1323,7 +1382,7 @@
         </li>
         <li>
           <span class="t-num">03</span>
-          <p>Control en los distintos espacios donde presentas tus ideas: mensajes complejos convertidos en <strong>mensajes irresistibles</strong> que mueven a la acción.</p>
+          <p>Control en los distintos espacios donde presentas tus ideas: mensajes complejos convertidos en <strong>mensajes efectivos</strong> que inspiran e influencian.</p>
         </li>
         <li>
           <span class="t-num">04</span>
@@ -1331,7 +1390,7 @@
         </li>
         <li>
           <span class="t-num">05</span>
-          <p><strong>Autonomía y confianza:</strong> pierdes el miedo de forma definitiva y empiezas a disfrutar cada vez que te encuentras frente a tus audiencias.</p>
+          <p><strong>Autonomía y confianza:</strong> pierdes el miedo y empiezas a disfrutar cada vez que te encuentras frente a tus audiencias.</p>
         </li>
       </ul>
     </div>
@@ -1353,7 +1412,7 @@
       <div class="about-copy reveal">
         <p class="eyebrow">Sobre mí</p>
         <p><strong>Politólogo y Magíster en Ciencia Política</strong>, especializado en comunicación política y opinión pública. He asesorado a entidades públicas y privadas en la formulación de estrategias de comunicación y en la estructuración de proyectos de cultura y cambio social, en lugares como la Dirección de Cultura Ciudadana de la Alcaldía Mayor de Bogotá, el Departamento Nacional de Planeación, la Gobernación de Bolívar y USAID.</p>
-        <p><strong>Coach Internacional Certificado</strong> por la International Coaching Community de Londres. He acompañado a más de 300 profesionales de distintas industrias y cargos a mejorar su forma de transmitir información, impactar entornos y gestionar audiencias exigentes, mediante técnicas de autoconocimiento y PNL.</p>
+        <p><strong>Coach Internacional Certificado</strong> por la International Coaching Community de Londres. He acompañado a más de 500 profesionales de distintas industrias y cargos a mejorar su forma de transmitir información, impactar entornos y gestionar audiencias exigentes, mediante técnicas de autoconocimiento y PNL.</p>
         <p>Soy también <strong>fotógrafo profesional</strong>: he dirigido documentación audiovisual de proyectos liderados por PNUD y USAID en Putumayo, Guaviare y Meta. Hoy soy <strong>consultor independiente</strong> en comunicación para el cambio social y profesor de habilidades gerenciales en la Pontificia Universidad Javeriana y en el CESA.</p>
 
         <div class="credential-tags">
@@ -1365,7 +1424,7 @@
 
         <div class="about-cta">
           <a href="#" class="btn btn-on-dark whatsapp-link">💬 Quiero llevar mi comunicación al siguiente nivel</a>
-          <p class="micro">Sesión exploratoria inicial gratuita en 15 minutos</p>
+          <p class="micro">Sesión exploratoria inicial gratuita en 20 minutos</p>
         </div>
       </div>
     </div>
@@ -1424,7 +1483,7 @@
     <div class="wrap final-cta-inner">
       <p class="eyebrow">Da el primer paso</p>
       <h2>Hacia una comunicación que <em>abre puertas</em>.</h2>
-      <p class="lede">No dejes que el miedo, la falta de técnica o los pensamientos saboteadores sigan limitando tu confianza y bloqueando tu crecimiento profesional. Escríbeme por WhatsApp para analizar tu caso en una sesión exploratoria de 15 minutos, completamente gratis.</p>
+      <p class="lede">No dejes que el miedo, la falta de técnica o los pensamientos saboteadores sigan limitando tu confianza y bloqueando tu crecimiento profesional. Escríbeme por WhatsApp para analizar tu caso en una sesión exploratoria de 20 minutos, completamente gratis.</p>
       <a href="#" class="btn btn-on-dark whatsapp-link">💬 Escríbeme por WhatsApp y comencemos</a>
       <div class="final-wave" aria-hidden="true">
         <div class="waveform">
@@ -1733,3 +1792,4 @@
 
 </body>
 </html>
+
